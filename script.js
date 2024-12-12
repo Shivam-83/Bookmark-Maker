@@ -19,9 +19,11 @@ function addBookmark(event) {
     // Check if site name and URL are provided
     if (siteName === "") {
         siteNameErrMsgEl.textContent = "Required*";
+        siteNameErrMsgEl.style.color = "red";
     }
     if (siteUrl === "") {
         siteUrlErrMsgEl.textContent = "Required*";
+        siteUrlErrMsgEl.style.color = "red";
     }
     if (siteName === "" || siteUrl === "") {
         return;
@@ -49,6 +51,7 @@ formEl.addEventListener('submit', addBookmark);
 siteNameInputEl.addEventListener('change', function() {
     if (siteNameInputEl.value === "") {
         siteNameErrMsgEl.textContent = "Required*";
+        siteNameErrMsgEl.style.color = "red";
     } else {
         siteNameErrMsgEl.textContent = "";
     }
@@ -57,6 +60,7 @@ siteNameInputEl.addEventListener('change', function() {
 siteUrlInputEl.addEventListener('change', function() {
     if (siteUrlInputEl.value.trim() === "") {
         siteUrlErrMsgEl.textContent = "Required*";
+        siteUrlErrMsgEl.style.color = "red";
     } else {
         siteUrlErrMsgEl.textContent = "";
     }
